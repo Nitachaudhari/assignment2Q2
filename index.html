@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Feedback Form</title>
+        <style>
+            /* General page styles */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f9;
+                margin: 0;
+                padding: 20px;
+            }
+    
+            h1 {
+                text-align: center;
+                color: #333;
+            }
+    
+            /* Form container */
+            form {
+                background-color: #fff;
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            }
+    
+            /* Styling for form labels and inputs */
+            label {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: bold;
+                color: #333;
+            }
+    
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            input[type="number"],
+            input[type="url"],
+            textarea,
+            select {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }           
+    
+            
+        </style>
+
+    </head>
+
+    <body>
+        <h1>Feedback Form</h1>
+        <form action="/submit-feedback" method="post">
+            <label for="Feedback-type">Feedback Type</label>
+            <select id="Feedback-type" name="Feedback-type">
+                <option value="bug">Bug Report</option>
+                <option value="feature">Feature Requests</option>
+                <option value="general">General</option>
+            </select>
+            <br><br>
+
+            <label for="message">User suggestion or issue</label>
+            <textarea id="message" name="message" row="4" cols="40"></textarea>
+            <br><br>
+            
+            <label>Rating</label>
+            <br>
+            <input type="radio" id="rating1" name="rating1" value="1"/>
+            <label for="rating1">1</label>
+            <input type="radio" id="rating2" name="rating2" value="2"/>
+            <label for="rating2">2</label>
+            <input type="radio" id="rating3" name="rating3" value="3"/>
+            <label for="rating3">3</label>
+            <input type="radio" id="rating4" name="rating4" value="4"/>
+            <label for="rating4">4</label>
+            <input type="radio" id="rating5" name="rating5" value="5"/>
+            <label for="rating5">5</label>
+            <br><br>   
+            
+            <label for="age">Enter Age</label>
+            <input type="number" id="age" name="age" min="10" max="100">
+            <br><br>
+
+            <label for="email">Enter Email</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+            <label for="password">Enter Password</label>
+            <input type="password" id="password" name="password" minlength="8" required>
+            <br><br>
+
+            <label for="website">Your Website (optional):</label>
+            <input type="url" id="website" name="website">
+            <br><br>
+
+            <input type="checkbox" id="terms" name="checkbox" required>
+            <label for="terms">I agree to terms and condition</label>
+            <br><br>
+
+            <button type="submit">Submit Feedback</button>
+
+
+        </form>
+    </body>
+</html>
